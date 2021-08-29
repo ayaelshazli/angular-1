@@ -1,0 +1,51 @@
+<h1>This Is {{ pageTitle() }}</h1>
+<div>Hello My Angular</div>
+
+<h2>This is {{"title"}} </h2>
+
+<h3>This is {{isHomePage ? "This is Home Page" : "About Page"}}</h3>
+/////////////////////////////////////
+<input type="text" placeholder="@Email" [value]="defaultEmail" >
+//////////////////////////////////////////
+
+<p [class.header]="isHeader" [class.blod]="!isHeader" >welcome</p>
+
+<p [ngClass]="headerClasses()" >class Binding</p>
+
+<p style="font-size: 4rem;" >single Binging</p>
+
+
+<p [style.fontSize]="singStyleBinding()" >Sing Style Binding</p>
+
+
+<p [ngStyle]="mltipleStyleBinding()">Mltiple Style Binding</p>
+
+
+
+<button (click)="toggleHeaderState()" >Toggle Header State</button>
+<h3>IsHeader: {{isHeader}}</h3>
+
+<div>//////////////////////ngIf///////////////////</div>
+
+<p *ngIf= "curses.lengh > 0 ; then cursesList else  noCurses"></p>
+<p *ngIf= "curses" style="color:rgb(255, 0, 157)"> {{curse.curseName}} </p>
+<p *ngIf= "curses; else templateVariable"> Curses </p>
+<ng-template #templateVariable>No Curses</ng-template>
+
+<div>//////////////////////////////ngSwitch////////////</div>
+
+<div [ngSwitch] ="name">
+<div *ngSwitchCase= "'cili'">welcome cili</div>    
+<div *ngSwitchCase= "'hana'">welcome hana</div> 
+<div *ngSwitchCase= "'tamer'">welcome tamer</div> 
+</div>
+
+<div>////////////////////ngFor/////////////</div>
+
+
+<ul>
+    <li *ngFor = "let s of student ;let i = index;let f = first;let l = last;let o = odd; let e = even"
+[ngClass]= "{firstitem:f,lastitem:l,lastitem:o,evenitem:e}">
+    {{i + 1}} {{student.name}}
+</li>
+</ul>

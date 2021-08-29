@@ -1,0 +1,26 @@
+.header{
+    font-size: 2rem;
+    color: rgb(140, 210, 163);
+}
+
+.bold{
+    color: rgba(248, 245, 246, 0.411);
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.firstitem{
+color: rgba(121, 23, 121, 0.712);
+}
+.lastitem{
+color: rgba(99, 7, 22, 0.699);
+}
+.odditem{
+color: rgb(172, 148, 216);
+}
+.evenitem{
+color: rgb(22, 174, 245);
+}
